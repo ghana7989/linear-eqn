@@ -1,7 +1,9 @@
 // x+2y+3z = 600
 // x, y, z >= 0
 // x, y, z are integers
+
 // reference : https://en.wikipedia.org/wiki/Pseudo-polynomial_time
+// used this algorithm mentioned in the above link
 const numberOfSolutions = (a, n) => {
 	// Dynamic Programming storage.
 	// dp[i][j] is the number of ways to get a sum of exactly
