@@ -22,14 +22,14 @@ const numberOfSolutions = (a, n) => {
 			//      where c is the coefficient of the term eliminated in (1).
 			//      This is because all the solutions for (i-c) are also solutions
 			//      for i by adding a c to each of them.
-			let temp = a[j];
+			let c = a[j];
 			let s1 = 0;
 			let s2 = 0;
 			if (j > 0) {
 				s1 = dp[i][j - 1];
 			}
-			if (i >= temp) {
-				s2 = dp[i - temp][j];
+			if (i >= c) {
+				s2 = dp[i - c][j];
 			}
 			dp[i][j] = s1 + s2;
 		}
